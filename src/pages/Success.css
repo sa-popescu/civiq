@@ -1,0 +1,46 @@
+.success-page { padding: 40px 0; }
+
+.success-card {
+  text-align: center;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.success-icon { font-size: 56px; }
+.success-card h1 { color: var(--green); }
+.success-card > p { font-size: 16px; }
+
+.ticket-id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 32px;
+  background: var(--gray-50);
+  border: 1.5px dashed var(--gray-200);
+  border-radius: var(--radius);
+  width: 100%;
+}
+
+.ticket-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); }
+.ticket-num { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--gray-800); letter-spacing: 0.05em; }
+
+.next-steps { display: flex; flex-direction: column; gap: 10px; width: 100%; text-align: left; }
+
+.next-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--gray-600);
+  padding: 10px 14px;
+  background: var(--gray-50);
+  border-radius: var(--radius-sm);
+}
+
+.success-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; width: 100%; }

@@ -1,0 +1,147 @@
+.report-page { padding: 24px 0 40px; }
+
+/* Progress bar */
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 32px;
+  padding: 0 8px;
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: var(--gray-200);
+  z-index: 0;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 1;
+}
+
+.progress-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gray-400);
+  transition: all 0.2s;
+}
+
+.progress-step.done .progress-dot { background: var(--green); border-color: var(--green); color: white; }
+.progress-step.active .progress-dot { background: var(--blue); border-color: var(--blue); color: white; }
+
+.progress-label { font-size: 11px; color: var(--gray-400); font-weight: 500; }
+.progress-step.active .progress-label { color: var(--blue); font-weight: 600; }
+
+/* Step panel */
+.step-panel { display: flex; flex-direction: column; gap: 16px; }
+.step-panel h2 { margin-bottom: 0; }
+
+/* Describe */
+.describe-box { position: relative; }
+.describe-box textarea { width: 100%; border-radius: var(--radius); padding: 14px; font-size: 15px; }
+.char-count { text-align: right; font-size: 12px; color: var(--gray-400); margin-top: 4px; }
+.hint-row { display: flex; align-items: center; }
+.hint { font-size: 13px; color: var(--gray-400); }
+
+/* Classified card */
+.classified-card {
+  border-left: 4px solid var(--urg, var(--blue));
+}
+
+.classified-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.classified-icon { font-size: 28px; flex-shrink: 0; }
+.classified-type { font-weight: 700; font-size: 16px; }
+.classified-explain { font-size: 13px; color: var(--gray-600); margin-top: 2px; }
+
+.urgency-pill {
+  margin-left: auto;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--urg-bg, var(--blue-pale));
+  color: var(--urg, var(--blue));
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.divider { height: 1px; background: var(--gray-100); margin: 14px 0; }
+
+.authority-row { display: flex; flex-direction: column; gap: 2px; }
+.authority-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-400); }
+.authority-name { font-weight: 600; font-size: 15px; color: var(--gray-800); }
+.authority-email { font-size: 13px; color: var(--blue); }
+
+.tip-box {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--blue-pale);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--blue);
+}
+
+/* Formal preview */
+.formal-preview { background: var(--gray-50); border-style: dashed; }
+.formal-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-400); margin-bottom: 8px; }
+.formal-text { font-size: 14px; line-height: 1.7; color: var(--gray-800); white-space: pre-wrap; }
+
+/* Step actions */
+.step-actions { display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap; }
+.step-actions .btn-secondary { margin-right: auto; }
+
+/* Confirm */
+.confirm-summary { padding: 0; overflow: hidden; }
+.summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--gray-100);
+  gap: 12px;
+}
+.summary-row:last-child { border-bottom: none; }
+.summary-key { font-size: 13px; color: var(--gray-400); flex-shrink: 0; }
+.summary-val { font-size: 14px; font-weight: 500; text-align: right; }
+
+.info-box {
+  background: var(--blue-pale);
+  border: 1px solid rgba(15,76,129,0.15);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--blue);
+  line-height: 1.6;
+}
+
+/* Error */
+.error-box {
+  background: var(--red-light);
+  border: 1px solid rgba(185,28,28,0.2);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--red);
+}

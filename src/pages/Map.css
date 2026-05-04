@@ -1,0 +1,65 @@
+.map-page { display: flex; flex-direction: column; height: calc(100dvh - 56px); }
+
+.map-header { padding: 16px 0 12px; background: var(--white); border-bottom: 1px solid var(--gray-200); flex-shrink: 0; }
+.map-header h2 { margin-bottom: 10px; }
+
+.filter-row { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.filter-btn {
+  white-space: nowrap;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1.5px solid var(--gray-200);
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-btn:hover { border-color: var(--blue); color: var(--blue); }
+.filter-btn.active { background: var(--blue); border-color: var(--blue); color: white; }
+
+.map-container { flex: 1; }
+
+.map-loading, .map-empty { flex: 1; display: flex; align-items: center; justify-content: center; }
+
+.empty-state {
+  text-align: center;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.map-legend {
+  display: flex;
+  gap: 16px;
+  padding: 8px 16px;
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--gray-600); }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* Leaflet popup */
+.popup { min-width: 160px; }
+.popup-icon { font-size: 20px; margin-bottom: 4px; }
+.popup-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+.popup-addr { font-size: 12px; color: #64748b; margin-bottom: 6px; }
+.popup-status {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.status-nou { background: #dbeafe; color: #1d4ed8; }
+.status-trimis { background: #fef3c7; color: #b45309; }
+.status-in_lucru { background: #e0f2fe; color: #0369a1; }
+.status-rezolvat { background: #dcfce7; color: #15803d; }
